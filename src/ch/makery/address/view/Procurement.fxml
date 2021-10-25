@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1024.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.makery.address.view.ProcurementController">
+   <children>
+      <Pane layoutX="14.0" layoutY="46.0" prefHeight="965.0" prefWidth="263.0">
+         <children>
+            <Separator layoutX="-8.0" layoutY="-2.0" prefHeight="7.0" prefWidth="1908.0" />
+            <Button fx:id="btClose" layoutX="73.0" layoutY="897.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="25.0" prefWidth="108.0" text="Back" />
+            <TitledPane animated="false" layoutX="9.0" layoutY="14.0" prefHeight="206.0" prefWidth="245.0" text="PRODUCTS">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="233.0">
+                     <children>
+                        <Button fx:id="btRawMaterials" layoutX="10.0" layoutY="96.0" mnemonicParsing="false" onAction="#RawMaterialsMenu" prefHeight="25.0" prefWidth="222.0" text="RAW MATERIALS" />
+                        <Button fx:id="btCommercial" layoutX="10.0" layoutY="17.0" mnemonicParsing="false" onAction="#CommercialsMenu" prefHeight="25.0" prefWidth="222.0" text="COMMERCIAL" />
+                        <Button fx:id="btComponents" layoutX="10.0" layoutY="57.0" mnemonicParsing="false" onAction="#ComponentMenu" prefHeight="25.0" prefWidth="222.0" text="COMPONENTS" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </TitledPane>
+            <TitledPane animated="false" layoutX="9.0" layoutY="357.0" prefHeight="280.0" prefWidth="245.0" text="CALCULATIONS">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="248.0" prefWidth="243.0">
+                     <children>
+                        <Button layoutX="14.0" layoutY="24.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="222.0" text="PUNTO DE PEDIDO" />
+                        <Button layoutX="14.0" layoutY="60.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="222.0" text="PUNTO DE REPOSICION" />
+                        <Button layoutX="14.0" layoutY="96.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="222.0" text="STOCKS MINIMOS" />
+                        <Button layoutX="14.0" layoutY="132.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="222.0" text="STOCKS DE SEGURIDAD" />
+                        <Button fx:id="btForecastDemand" layoutX="14.0" layoutY="170.0" mnemonicParsing="false" onAction="#ForecastDemandMenu" prefHeight="25.0" prefWidth="222.0" text="FORECAST / DEMAND" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </TitledPane>
+            <TitledPane animated="false" layoutX="9.0" layoutY="230.0" prefHeight="109.0" prefWidth="245.0" text="STOCK">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="btStockManagement" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#StockStatistics" prefHeight="25.0" prefWidth="220.0" text="STOCK MANAGEMENT" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </TitledPane>
+         </children></Pane>
+      <TabPane layoutX="274.0" layoutY="57.0" prefHeight="958.0" prefWidth="1640.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="STOCK">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="738.0" prefWidth="1640.0">
+                     <children>
+                        <TableView fx:id="tblViewCommercials" layoutX="10.0" layoutY="144.0" prefHeight="776.0" prefWidth="1629.0">
+                          <columns>
+                            <TableColumn fx:id="clmnCommercialCode" prefWidth="104.0" text="CODE" />
+                            <TableColumn fx:id="clmnCommercialDescription" prefWidth="337.0" text="DESCRIPTION" />
+                              <TableColumn fx:id="clmnFamily" prefWidth="169.0" text="FAMILY" />
+                              <TableColumn fx:id="clmnStock" prefWidth="149.0" text="STOCK" />
+                              <TableColumn fx:id="clmnSecurityStock" prefWidth="159.0" text="SECURITY STOCK" />
+                              <TableColumn fx:id="clmnCost" prefWidth="172.0" text="UNIT COST" />
+                              <TableColumn fx:id="clmnTotalCost" prefWidth="151.0" text="TOTAL COST" />
+                          </columns>
+                        </TableView>
+                        <Text layoutX="23.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total commercial products" wrappingWidth="199.13671875" />
+                        <Text layoutX="23.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total raw materials" wrappingWidth="199.13671875" />
+                        <Text layoutX="222.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RESULTADO" wrappingWidth="68.173828125" />
+                        <Text layoutX="222.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RESULTADO" wrappingWidth="68.173828125" />
+                        <Separator layoutX="378.0" layoutY="23.0" orientation="VERTICAL" prefHeight="92.0" prefWidth="0.0" />
+                        <Text layoutX="460.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total components" wrappingWidth="199.13671875" />
+                        <Text layoutX="460.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total commercial products" wrappingWidth="199.13671875" />
+                        <Text layoutX="460.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total raw materials" wrappingWidth="199.13671875" />
+                        <Text layoutX="659.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RESULTADO" wrappingWidth="68.173828125" />
+                        <Text layoutX="659.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RESULTADO" wrappingWidth="68.173828125" />
+                        <Text layoutX="659.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RESULTADO" wrappingWidth="68.173828125" />
+                        <Separator layoutX="825.0" layoutY="23.0" orientation="VERTICAL" prefHeight="92.0" prefWidth="0.0" />
+                        <Label fx:id="lblTotalStock" layoutX="457.0" layoutY="22.0" prefHeight="17.0" prefWidth="270.0" text="TOTAL AMOUNT ON STOCK:" />
+                        <Label fx:id="lblTotalResults" layoutX="24.0" layoutY="22.0" prefHeight="17.0" prefWidth="304.0" text="TOTAL CODES ON STOCK:" />
+                        <Text layoutX="23.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total components" wrappingWidth="199.13671875" />
+                        <Text layoutX="222.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RESULTADO" wrappingWidth="68.173828125" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="NEEDS">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView layoutX="7.0" layoutY="198.0" prefHeight="785.0" prefWidth="1634.0">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="Code" />
+                            <TableColumn prefWidth="266.0" text="Description" />
+                          </columns>
+                        </TableView>
+                        <Text layoutX="22.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Necesidades por rotura de stock minmo" wrappingWidth="232.13671875" />
+                        <Text layoutX="22.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Necesidades por rotura de stock de seguridad" wrappingWidth="254.13671875" />
+                        <Text layoutX="312.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RESULTADO" wrappingWidth="125.13671875" />
+                        <Text layoutX="312.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RESULTADO" wrappingWidth="125.13671875" />
+                        <Button layoutX="424.0" layoutY="20.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="50.0" text="Ver" />
+                        <Button layoutX="424.0" layoutY="56.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="51.0" text="Ver" />
+                        <Button layoutX="497.0" layoutY="20.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="51.0" text="Print" />
+                        <Button layoutX="497.0" layoutY="56.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="51.0" text="Print" />
+                        <Text layoutX="22.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Suggested Orders" wrappingWidth="232.13671875" />
+                        <Text layoutX="312.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RESULTADO" wrappingWidth="125.13671875" />
+                        <Button layoutX="424.0" layoutY="90.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="51.0" text="Ver" />
+                        <Button layoutX="497.0" layoutY="90.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="51.0" text="Print" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Text layoutX="926.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Procurement" />
+   </children>
+</AnchorPane>

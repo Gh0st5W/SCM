@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="1024.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.makery.address.view.ForecastController">
+   <children>
+      <Button fx:id="btClose" layoutX="96.0" layoutY="919.0" mnemonicParsing="false" onAction="#closeWindow" text="Close" />
+      <TabPane layoutX="230.0" layoutY="14.0" prefHeight="999.0" prefWidth="1676.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="CONSUMO">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView prefHeight="947.0" prefWidth="1654.0">
+                           <columns>
+                              <TableColumn prefWidth="100.0" text="CODE" />
+                              <TableColumn prefWidth="246.0" text="DESCRIPTION" />
+                              <TableColumn prefWidth="91.0" text="JAN" />
+                              <TableColumn prefWidth="91.0" text="FEB" />
+                              <TableColumn prefWidth="91.0" text="MAR" />
+                              <TableColumn prefWidth="91.0" text="ABR" />
+                              <TableColumn prefWidth="91.0" text="MAY" />
+                              <TableColumn prefWidth="91.0" text="JUN" />
+                              <TableColumn prefWidth="91.0" text="JUL" />
+                              <TableColumn prefWidth="91.0" text="AGO" />
+                              <TableColumn prefWidth="91.0" text="SEP" />
+                              <TableColumn prefWidth="91.0" text="OCT" />
+                              <TableColumn prefWidth="91.0" text="NOV" />
+                              <TableColumn prefWidth="91.0" text="DEC" />
+                              <TableColumn prefWidth="97.0" text="TOTAL" />
+                              <TableColumn prefWidth="118.0" text="SDARTD DESV" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="FORECAST">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tblViewForecast" layoutX="-2.0" layoutY="-1.0" prefHeight="962.0" prefWidth="1670.0">
+                          <columns>
+                            <TableColumn fx:id="clmnCodeF" prefWidth="100.0" text="CODE" />
+                            <TableColumn fx:id="clmnDescriptionF" prefWidth="246.0" text="DESCRIPTION" />
+                              <TableColumn fx:id="clmnJanF" prefWidth="91.0" text="JAN" />
+                              <TableColumn fx:id="clmnFebF" prefWidth="91.0" text="FEB" />
+                              <TableColumn fx:id="clmnMarF" prefWidth="91.0" text="MAR" />
+                              <TableColumn fx:id="clmnAprF" prefWidth="91.0" text="ABR" />
+                              <TableColumn fx:id="clmnMayF" prefWidth="91.0" text="MAY" />
+                              <TableColumn fx:id="clmnJunF" prefWidth="91.0" text="JUN" />
+                              <TableColumn fx:id="clmnJulF" prefWidth="91.0" text="JUL" />
+                              <TableColumn fx:id="clmnAugF" prefWidth="91.0" text="AGO" />
+                              <TableColumn fx:id="clmnSepF" prefWidth="91.0" text="SEP" />
+                              <TableColumn fx:id="clmnOctF" prefWidth="91.0" text="OCT" />
+                              <TableColumn fx:id="clmnNovF" prefWidth="91.0" text="NOV" />
+                              <TableColumn fx:id="clmnDecF" prefWidth="91.0" text="DEC" />
+                              <TableColumn fx:id="clmnTotalF" prefWidth="108.0" text="TOTAL" />
+                              <TableColumn fx:id="clmnDesvStandardF" prefWidth="123.0" text="SDARTD DESV" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Pane layoutX="7.0" layoutY="14.0" prefHeight="888.0" prefWidth="217.0">
+         <children>
+            <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FILTER" wrappingWidth="191.13671875" />
+            <Text layoutX="14.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CODE" />
+            <Text layoutX="14.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DESCRIPTION" />
+            <TextField layoutX="14.0" layoutY="78.0" prefHeight="25.0" prefWidth="191.0" />
+            <TextField layoutX="13.0" layoutY="144.0" prefHeight="25.0" prefWidth="191.0" />
+            <Separator layoutX="9.0" layoutY="251.0" prefWidth="200.0" />
+            <Text layoutX="13.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CURRENT RESULTS" wrappingWidth="113.13671875" />
+            <Label fx:id="lblTotalResults" layoutX="150.0" layoutY="271.0" prefHeight="17.0" prefWidth="58.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

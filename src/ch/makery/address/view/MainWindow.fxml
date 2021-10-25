@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="1024.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.makery.address.view.MainWindowController">
+   <children>
+      <SplitPane dividerPositions="0.16371220020855057" layoutX="153.0" layoutY="70.0" prefHeight="300.0" prefWidth="1920.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1022.0" prefWidth="318.0">
+               <children>
+                  <AnchorPane layoutX="2.0" layoutY="4.0" prefHeight="1165.0" prefWidth="316.0">
+                     <children>
+                        <ImageView fitHeight="1449.0" fitWidth="322.0" layoutX="-6.0" layoutY="-134.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../images/MAINMENUBAR.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btClose" layoutX="105.0" layoutY="824.0" mnemonicParsing="false" onAction="#closeApp" prefHeight="25.0" prefWidth="95.0" text="EXIT" />
+                        <ImageView fitHeight="21.0" fitWidth="197.0" layoutX="52.0" layoutY="947.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../images/SCM.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="58.0" fitWidth="197.0" layoutX="52.0" layoutY="878.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../images/TucaiLogo.png" />
+                           </image>
+                        </ImageView>
+                        <Text layoutX="61.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                        <Separator layoutX="14.0" layoutY="867.0" prefHeight="3.0" prefWidth="275.0" />
+                        <TitledPane animated="false" layoutX="15.0" layoutY="91.0" prefHeight="262.0" prefWidth="275.0" text="SUPPLY CHAIN MANAGEMENT">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="206.0" prefWidth="273.0">
+                                 <children>
+                                    <Button fx:id="btProductionPlan" layoutX="15.0" layoutY="124.0" mnemonicParsing="false" onAction="#productionMenu" prefHeight="25.0" prefWidth="240.0" text="PRODUCTION" />
+                                    <Button fx:id="btProcurementnPlan" layoutX="15.0" layoutY="89.0" mnemonicParsing="false" onAction="#procurementMenu" prefHeight="25.0" prefWidth="240.0" text="PROCUREMENT" />
+                                    <Button fx:id="btLogisticsPlan" layoutX="15.0" layoutY="159.0" mnemonicParsing="false" onAction="#logisticsMenu" prefHeight="25.0" prefWidth="240.0" text="LOGISTICS" />
+                                    <Button layoutX="15.0" layoutY="16.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="239.0" text="PLANNING" />
+                                    <Button layoutX="15.0" layoutY="196.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="240.0" text="MAINTANCE" />
+                                    <Button fx:id="btPurchasing" layoutX="15.0" layoutY="52.0" mnemonicParsing="false" onAction="#purchasingMenu" prefHeight="25.0" prefWidth="240.0" text="PURCHASING" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <TitledPane animated="false" layoutX="15.0" layoutY="365.0" prefHeight="85.0" prefWidth="275.0" text="KEY PERFORMANCE INDEX (KPI)">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="135.0" prefWidth="273.0">
+                                 <children>
+                                    <Button fx:id="btSupplyManagementTools" layoutX="17.0" layoutY="14.0" mnemonicParsing="false" onAction="#SupplyChainManagementToolsMenu" prefHeight="25.0" prefWidth="240.0" text="SUPPLY CHAIN MANAGEMENT TOOLS" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <TitledPane animated="false" layoutX="13.0" layoutY="462.0" prefHeight="85.0" prefWidth="275.0" text="OTHERS">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="60.0" prefWidth="273.0">
+                                 <children>
+                                    <Button fx:id="btSuppliers1" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#SuppliersMenu" prefHeight="25.0" prefWidth="243.0" text="PRODUCT CATEGORIZATION" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <Text fill="#f5f5f5" layoutX="120.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MAIN MENU">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutX="29.0" layoutY="60.0" prefHeight="2.0" prefWidth="256.0" />
+                        <Separator layoutX="31.0" layoutY="22.0" prefHeight="2.0" prefWidth="256.0" />
+                        <ImageView fitHeight="29.0" fitWidth="152.0" layoutX="92.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../images/MAINMENU.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1022.0" prefWidth="1601.0">
+               <children>
+                  <ImageView fitHeight="1313.0" fitWidth="1614.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../images/MainWindow1.png" />
+                     </image>
+                  </ImageView>
+                  <ButtonBar layoutX="54.0" layoutY="250.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+                  <AnchorPane layoutX="10.0" layoutY="76.0" opacity="0.89" prefHeight="304.0" prefWidth="1578.0" style="-fx-background-color: white;">
+                     <children>
+                        <Text layoutX="42.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MAIN KEY PERFORMANCE INDEX" wrappingWidth="207.13671875">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="25.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SERVICE LEVEL" wrappingWidth="161.13671875" />
+                        <Text layoutX="25.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SERVICE LEVEL" wrappingWidth="161.13671875" />
+                        <Text layoutX="25.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SERVICE LEVEL" wrappingWidth="161.13671875" />
+                        <Text layoutX="25.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SERVICE LEVEL" wrappingWidth="161.13671875" />
+                        <Text layoutX="25.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SERVICE LEVEL" wrappingWidth="161.13671875" />
+                        <Text layoutX="25.0" layoutY="276.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SERVICE LEVEL" wrappingWidth="161.13671875" />
+                        <Text layoutX="240.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100%" wrappingWidth="40.13671875" />
+                        <Text layoutX="240.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100%" wrappingWidth="40.13671875" />
+                        <Text layoutX="240.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100%" wrappingWidth="40.13671875" />
+                        <Text layoutX="240.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100%" wrappingWidth="40.13671875" />
+                        <Text layoutX="240.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100%" wrappingWidth="40.13671875" />
+                        <Text layoutX="240.0" layoutY="276.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100%" wrappingWidth="40.13671875" />
+                        <ImageView fitHeight="363.0" fitWidth="761.0" layoutX="796.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../images/G3.png" />
+                           </image>
+                        </ImageView>
+                        <Separator layoutX="370.0" layoutY="25.0" orientation="VERTICAL" prefHeight="278.0" prefWidth="4.0" />
+                        <ImageView fitHeight="260.0" fitWidth="353.0" layoutX="386.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../images/pie-fruits.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane layoutX="10.0" layoutY="392.0" minHeight="0.0" minWidth="0.0" opacity="0.9" prefHeight="620.0" prefWidth="1578.0">
+                     <children>
+                        <ScrollPane prefHeight="629.0" prefWidth="1579.0">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1658.0" prefWidth="1337.0">
+                                 <children>
+                                    <Text layoutX="13.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PRODUCTION" wrappingWidth="275.4700622558594" />
+                                    <Separator layoutX="42.0" layoutY="62.0" prefHeight="2.0" prefWidth="1509.0" />
+                                    <Text layoutX="13.0" layoutY="349.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PLANNING" wrappingWidth="275.4700622558594" />
+                                    <Separator layoutX="13.0" layoutY="320.0" prefHeight="2.0" prefWidth="1509.0" />
+                                    <Text layoutX="14.0" layoutY="583.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PURCHASING" wrappingWidth="275.4700622558594" />
+                                    <Separator layoutX="16.0" layoutY="555.0" prefHeight="4.0" prefWidth="1514.0" />
+                                    <Text layoutX="12.0" layoutY="864.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PROCUREMENT" wrappingWidth="275.4700622558594" />
+                                    <Text layoutX="66.0" layoutY="920.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SLA" />
+                                    <Text layoutX="65.0" layoutY="954.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OTD ( On Time Delivery)" />
+                                    <Separator layoutX="14.0" layoutY="839.0" prefHeight="1.0" prefWidth="1514.0" />
+                                    <Text layoutX="36.0" layoutY="1141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOGISTICS" wrappingWidth="275.4700622558594" />
+                                    <Separator layoutX="25.0" layoutY="1368.0" prefHeight="1.0" prefWidth="1514.0" />
+                                    <Text layoutX="32.0" layoutY="1394.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MAINTANCE" />
+                                    <Separator layoutX="31.0" layoutY="1119.0" prefHeight="1.0" prefWidth="1514.0" />
+                                    <TableView layoutX="383.0" layoutY="597.0" prefHeight="200.0" prefWidth="626.0">
+                                       <columns>
+                                          <TableColumn minWidth="45.0" prefWidth="-1.0" text="KPI" />
+                                          <TableColumn minWidth="45.0" prefWidth="-1.0" text="JAN" />
+                                          <TableColumn minWidth="45.0" prefWidth="-1.0" text="FEB" />
+                                          <TableColumn minWidth="45.0" prefWidth="-1.0" text="MAR" />
+                                          <TableColumn minWidth="45.0" prefWidth="-1.0" text="MAY" />
+                                          <TableColumn minWidth="45.0" prefWidth="-1.0" text="JUN" />
+                                          <TableColumn minWidth="45.0" prefWidth="-1.0" text="JUL" />
+                                          <TableColumn minWidth="45.0" prefWidth="-1.0" text="AUG" />
+                                          <TableColumn minWidth="45.0" prefWidth="-1.0" text="SEP" />
+                                          <TableColumn minWidth="45.0" prefWidth="75.0" text="OCT" />
+                                          <TableColumn minWidth="45.0" prefWidth="75.0" text="NOV" />
+                                          <TableColumn minWidth="45.0" prefWidth="75.0" text="DEC" />
+                                       </columns>
+                                    </TableView>
+                                    <LineChart layoutX="1069.0" layoutY="592.0" prefHeight="224.0" prefWidth="470.0">
+                                       <xAxis>
+                                          <CategoryAxis side="BOTTOM" />
+                                       </xAxis>
+                                       <yAxis>
+                                          <NumberAxis side="LEFT" />
+                                       </yAxis>
+                                    </LineChart>
+                                    <TableView layoutX="384.0" layoutY="337.0" prefHeight="200.0" prefWidth="626.0">
+                                       <columns>
+                                          <TableColumn minWidth="45.0" prefWidth="-1.0" text="KPI" />
+                                          <TableColumn minWidth="45.0" prefWidth="-1.0" text="JAN" />
+                                          <TableColumn minWidth="45.0" prefWidth="-1.0" text="FEB" />
+                                          <TableColumn minWidth="45.0" prefWidth="-1.0" text="MAR" />
+                                          <TableColumn minWidth="45.0" prefWidth="-1.0" text="MAY" />
+                                          <TableColumn minWidth="45.0" prefWidth="-1.0" text="JUN" />
+                                          <TableColumn minWidth="45.0" prefWidth="-1.0" text="JUL" />
+                                          <TableColumn minWidth="45.0" prefWidth="-1.0" text="AUG" />
+                                          <TableColumn minWidth="45.0" prefWidth="-1.0" text="SEP" />
+                                          <TableColumn minWidth="45.0" prefWidth="75.0" text="OCT" />
+                                          <TableColumn minWidth="45.0" prefWidth="75.0" text="NOV" />
+                                          <TableColumn minWidth="45.0" prefWidth="75.0" text="DEC" />
+                                       </columns>
+                                    </TableView>
+                                    <LineChart layoutX="1070.0" layoutY="332.0" prefHeight="224.0" prefWidth="470.0">
+                                       <xAxis>
+                                          <CategoryAxis side="BOTTOM" />
+                                       </xAxis>
+                                       <yAxis>
+                                          <NumberAxis side="LEFT" />
+                                       </yAxis>
+                                    </LineChart>
+                                    <TableView layoutX="384.0" layoutY="89.0" prefHeight="200.0" prefWidth="626.0">
+                                       <columns>
+                                          <TableColumn minWidth="45.0" prefWidth="-1.0" text="KPI" />
+                                          <TableColumn minWidth="45.0" prefWidth="-1.0" text="JAN" />
+                                          <TableColumn minWidth="45.0" prefWidth="-1.0" text="FEB" />
+                                          <TableColumn minWidth="45.0" prefWidth="-1.0" text="MAR" />
+                                          <TableColumn minWidth="45.0" prefWidth="-1.0" text="MAY" />
+                                          <TableColumn minWidth="45.0" prefWidth="-1.0" text="JUN" />
+                                          <TableColumn minWidth="45.0" prefWidth="-1.0" text="JUL" />
+                                          <TableColumn minWidth="45.0" prefWidth="-1.0" text="AUG" />
+                                          <TableColumn minWidth="45.0" prefWidth="-1.0" text="SEP" />
+                                          <TableColumn minWidth="45.0" prefWidth="75.0" text="OCT" />
+                                          <TableColumn minWidth="45.0" prefWidth="75.0" text="NOV" />
+                                          <TableColumn minWidth="45.0" prefWidth="75.0" text="DEC" />
+                                       </columns>
+                                    </TableView>
+                                    <LineChart layoutX="1070.0" layoutY="84.0" prefHeight="224.0" prefWidth="470.0">
+                                       <xAxis>
+                                          <CategoryAxis side="BOTTOM" />
+                                       </xAxis>
+                                       <yAxis>
+                                          <NumberAxis side="LEFT" />
+                                       </yAxis>
+                                    </LineChart>
+                                    <TableView layoutX="386.0" layoutY="1405.0" prefHeight="200.0" prefWidth="626.0">
+                                       <columns>
+                                          <TableColumn minWidth="45.0" prefWidth="-1.0" text="KPI" />
+                                          <TableColumn minWidth="45.0" prefWidth="-1.0" text="JAN" />
+                                          <TableColumn minWidth="45.0" prefWidth="-1.0" text="FEB" />
+                                          <TableColumn minWidth="45.0" prefWidth="-1.0" text="MAR" />
+                                          <TableColumn minWidth="45.0" prefWidth="-1.0" text="MAY" />
+                                          <TableColumn minWidth="45.0" prefWidth="-1.0" text="JUN" />
+                                          <TableColumn minWidth="45.0" prefWidth="-1.0" text="JUL" />
+                                          <TableColumn minWidth="45.0" prefWidth="-1.0" text="AUG" />
+                                          <TableColumn minWidth="45.0" prefWidth="-1.0" text="SEP" />
+                                          <TableColumn minWidth="45.0" prefWidth="75.0" text="OCT" />
+                                          <TableColumn minWidth="45.0" prefWidth="75.0" text="NOV" />
+                                          <TableColumn minWidth="45.0" prefWidth="75.0" text="DEC" />
+                                       </columns>
+                                    </TableView>
+                                    <LineChart layoutX="1072.0" layoutY="1380.0" prefHeight="224.0" prefWidth="470.0">
+                                       <xAxis>
+                                          <CategoryAxis side="BOTTOM" />
+                                       </xAxis>
+                                       <yAxis>
+                                          <NumberAxis side="LEFT" />
+                                       </yAxis>
+                                    </LineChart>
+                                    <TableView layoutX="387.0" layoutY="1145.0" prefHeight="200.0" prefWidth="626.0">
+                                       <columns>
+                                          <TableColumn minWidth="45.0" prefWidth="-1.0" text="KPI" />
+                                          <TableColumn minWidth="45.0" prefWidth="-1.0" text="JAN" />
+                                          <TableColumn minWidth="45.0" prefWidth="-1.0" text="FEB" />
+                                          <TableColumn minWidth="45.0" prefWidth="-1.0" text="MAR" />
+                                          <TableColumn minWidth="45.0" prefWidth="-1.0" text="MAY" />
+                                          <TableColumn minWidth="45.0" prefWidth="-1.0" text="JUN" />
+                                          <TableColumn minWidth="45.0" prefWidth="-1.0" text="JUL" />
+                                          <TableColumn minWidth="45.0" prefWidth="-1.0" text="AUG" />
+                                          <TableColumn minWidth="45.0" prefWidth="-1.0" text="SEP" />
+                                          <TableColumn minWidth="45.0" prefWidth="75.0" text="OCT" />
+                                          <TableColumn minWidth="45.0" prefWidth="75.0" text="NOV" />
+                                          <TableColumn minWidth="45.0" prefWidth="75.0" text="DEC" />
+                                       </columns>
+                                    </TableView>
+                                    <LineChart layoutX="1073.0" layoutY="1120.0" prefHeight="224.0" prefWidth="470.0">
+                                       <xAxis>
+                                          <CategoryAxis side="BOTTOM" />
+                                       </xAxis>
+                                       <yAxis>
+                                          <NumberAxis side="LEFT" />
+                                       </yAxis>
+                                    </LineChart>
+                                    <TableView layoutX="387.0" layoutY="877.0" prefHeight="200.0" prefWidth="626.0">
+                                       <columns>
+                                          <TableColumn minWidth="45.0" prefWidth="-1.0" text="KPI" />
+                                          <TableColumn minWidth="45.0" prefWidth="-1.0" text="JAN" />
+                                          <TableColumn minWidth="45.0" prefWidth="-1.0" text="FEB" />
+                                          <TableColumn minWidth="45.0" prefWidth="-1.0" text="MAR" />
+                                          <TableColumn minWidth="45.0" prefWidth="-1.0" text="MAY" />
+                                          <TableColumn minWidth="45.0" prefWidth="-1.0" text="JUN" />
+                                          <TableColumn minWidth="45.0" prefWidth="-1.0" text="JUL" />
+                                          <TableColumn minWidth="45.0" prefWidth="-1.0" text="AUG" />
+                                          <TableColumn minWidth="45.0" prefWidth="-1.0" text="SEP" />
+                                          <TableColumn minWidth="45.0" prefWidth="75.0" text="OCT" />
+                                          <TableColumn minWidth="45.0" prefWidth="75.0" text="NOV" />
+                                          <TableColumn minWidth="45.0" prefWidth="75.0" text="DEC" />
+                                       </columns>
+                                    </TableView>
+                                    <LineChart layoutX="1073.0" layoutY="872.0" prefHeight="224.0" prefWidth="470.0">
+                                       <xAxis>
+                                          <CategoryAxis side="BOTTOM" />
+                                       </xAxis>
+                                       <yAxis>
+                                          <NumberAxis side="LEFT" />
+                                       </yAxis>
+                                    </LineChart>
+                                    <Text layoutX="31.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Productivity Stretching Target" wrappingWidth="211.64634704589844" />
+                                    <Text layoutX="288.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100%" wrappingWidth="40.13671875" />
+                                    <Text layoutX="31.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Productivity Plan Goal" wrappingWidth="211.64634704589844" />
+                                    <Text layoutX="288.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100%" wrappingWidth="40.13671875" />
+                                    <Text layoutX="31.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Productivity ( Manual Lines)" wrappingWidth="211.64634704589844" />
+                                    <Text layoutX="288.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100%" wrappingWidth="40.13671875" />
+                                    <Text layoutX="31.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OEE stretching Target" wrappingWidth="211.64634704589844" />
+                                    <Text layoutX="288.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100%" wrappingWidth="40.13671875" />
+                                    <Text layoutX="31.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OEE Plan Goal" wrappingWidth="211.64634704589844" />
+                                    <Text layoutX="288.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100%" wrappingWidth="40.13671875" />
+                                    <Text layoutX="31.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OEE Actual" wrappingWidth="211.64634704589844" />
+                                    <Text layoutX="288.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100%" wrappingWidth="40.13671875" />
+                                    <Text layoutX="129.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MANUAL LINES" wrappingWidth="211.64634704589844" />
+                                    <Text layoutX="128.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AUTOMATIC LINES" wrappingWidth="211.64634704589844" />
+                                    <Text layoutX="42.0" layoutY="1440.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Breakdowns (Units)" wrappingWidth="211.64634704589844" />
+                                    <Text layoutX="299.0" layoutY="1441.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100%" wrappingWidth="40.13671875" />
+                                    <Text layoutX="42.0" layoutY="1460.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Average Solving time (Min)" wrappingWidth="211.64634704589844" />
+                                    <Text layoutX="299.0" layoutY="1461.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100%" wrappingWidth="40.13671875" />
+                                    <Text layoutX="42.0" layoutY="1480.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MTBF (Average time between failure)" wrappingWidth="211.64634704589844" />
+                                    <Text layoutX="299.0" layoutY="1481.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100%" wrappingWidth="40.13671875" />
+                                    <Text layoutX="140.0" layoutY="1418.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MANUAL LINES" wrappingWidth="211.64634704589844" />
+                                    <Separator layoutX="31.0" layoutY="1637.0" prefHeight="1.0" prefWidth="1514.0" />
+                                    <Text layoutX="42.0" layoutY="1500.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MTBF (Average time between failure)" wrappingWidth="211.64634704589844" />
+                                    <Text layoutX="299.0" layoutY="1501.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100%" wrappingWidth="40.13671875" />
+                                    <Text layoutX="42.0" layoutY="1182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OTD Goal" />
+                                    <Text layoutX="42.0" layoutY="1202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OTD ( On Time Delivery)" />
+                                    <Text layoutX="42.0" layoutY="1222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OTD Retail" />
+                                    <Text layoutX="42.0" layoutY="1243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OTD OEM" />
+                                    <Text layoutX="42.0" layoutY="1264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OTD KAM" />
+                                    <Text layoutX="291.0" layoutY="1183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100%" wrappingWidth="40.13671875" />
+                                    <Text layoutX="291.0" layoutY="1203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100%" wrappingWidth="40.13671875" />
+                                    <Text layoutX="291.0" layoutY="1223.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100%" wrappingWidth="40.13671875" />
+                                    <Text layoutX="291.0" layoutY="1243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100%" wrappingWidth="40.13671875" />
+                                    <Text layoutX="291.0" layoutY="1264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100%" wrappingWidth="40.13671875" />
+                                    <Text layoutX="288.0" layoutY="916.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100%" wrappingWidth="40.13671875" />
+                                    <Text layoutX="288.0" layoutY="951.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100%" wrappingWidth="40.13671875" />
+                                    <Text layoutX="66.0" layoutY="937.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SLA - Commercial" />
+                                    <Text layoutX="288.0" layoutY="933.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100%" wrappingWidth="40.13671875" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

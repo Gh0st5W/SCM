@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1024.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.makery.address.view.LogisticsController">
+   <children>
+      <TabPane layoutX="301.0" layoutY="44.0" prefHeight="976.0" prefWidth="1611.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Transport ">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="913.0" prefWidth="1610.0" />
+            </content>
+          </Tab>
+          <Tab text="Warehouse">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <TitledPane animated="false" layoutX="14.0" layoutY="44.0" onDragDetected="#StockStatistics" prefHeight="970.0" prefWidth="280.0" text="LOGISTICS">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="814.0" prefWidth="278.0">
+               <children>
+                  <Button fx:id="btTransport" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="245.0" text="Transport" />
+                  <Button fx:id="btWarehouse" layoutX="17.0" layoutY="50.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="245.0" text="Warehouse" />
+                  <Button fx:id="btStockManagement" layoutX="17.0" layoutY="85.0" mnemonicParsing="false" onAction="#StockStatistics" prefHeight="25.0" prefWidth="245.0" text="Stock Management" />
+                  <Button fx:id="btBack" layoutX="107.0" layoutY="875.0" mnemonicParsing="false" onAction="#backWindow" prefHeight="25.0" prefWidth="62.0" text="Back" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

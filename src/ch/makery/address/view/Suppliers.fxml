@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1024.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.makery.address.view.SuppliersController">
+   <children>
+      <TableView layoutX="14.0" layoutY="143.0" prefHeight="875.0" prefWidth="1900.0">
+        <columns>
+          <TableColumn prefWidth="105.0" text="Supplier Code" />
+          <TableColumn prefWidth="285.0" text="Supplier Name" />
+            <TableColumn prefWidth="125.0" text="Country" />
+            <TableColumn prefWidth="137.0" text="Lead Time" />
+            <TableColumn prefWidth="133.0" text="Incoterm" />
+            <TableColumn prefWidth="128.0" text="Column X" />
+            <TableColumn prefWidth="141.0" text="Column X" />
+        </columns>
+      </TableView>
+      <Text layoutX="14.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Code" />
+      <Text layoutX="259.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+      <TextField layoutX="62.0" layoutY="100.0" />
+      <TextField layoutX="314.0" layoutY="100.0" />
+      <Button layoutX="504.0" layoutY="100.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Find" />
+      <Button fx:id="btClose" layoutX="1808.0" layoutY="100.0" mnemonicParsing="false" onAction="#btClose" prefHeight="25.0" prefWidth="98.0" text="Back" />
+      <Text layoutX="944.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Suppliers" />
+      <Separator layoutX="14.0" layoutY="53.0" prefHeight="0.0" prefWidth="1887.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="1024.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.makery.address.view.StockManagementController">
+   <children>
+      <BarChart fx:id="barChart" layoutX="333.0" layoutY="629.0" prefHeight="345.0" prefWidth="1565.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="333.0" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="629.0">
+        <xAxis>
+          <CategoryAxis label="Months" side="BOTTOM" fx:id="xAxis" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="yAxis" label="Euros" side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <Text layoutX="893.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="STOCK MANAGEMENT" wrappingWidth="127.13671875" />
+      <Separator layoutX="12.0" layoutY="52.0" prefHeight="1.0" prefWidth="1890.0" />
+      <Text layoutX="45.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Family" wrappingWidth="108.13671875" />
+      <Text layoutX="45.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Family" wrappingWidth="108.13671875" />
+      <Text layoutX="45.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Family" wrappingWidth="108.13671875" />
+      <Text layoutX="45.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Family" wrappingWidth="108.13671875" />
+      <ComboBox layoutX="136.0" layoutY="64.0" prefWidth="150.0" />
+      <ComboBox layoutX="136.0" layoutY="99.0" prefWidth="150.0" />
+      <ComboBox layoutX="136.0" layoutY="136.0" prefWidth="150.0" />
+      <ComboBox layoutX="136.0" layoutY="171.0" prefWidth="150.0" />
+      <Button fx:id="btClose" layoutX="152.0" layoutY="892.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="25.0" prefWidth="86.0" text="Close" />
+      <TabPane layoutX="396.0" layoutY="92.0" prefHeight="496.0" prefWidth="1506.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="EUROS">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="294.0" prefWidth="533.0">
+                     <children>
+                        <TableView fx:id="tblViewStocksCost" layoutX="11.0" layoutY="14.0" prefHeight="441.0" prefWidth="1483.0">
+                          <columns>
+                            <TableColumn fx:id="clmnItem" prefWidth="114.0" text="ITEM" />
+                            <TableColumn fx:id="clmnJan" prefWidth="114.0" text="JAN" />
+                              <TableColumn fx:id="clmnFeb" prefWidth="114.0" text="FEB" />
+                              <TableColumn fx:id="clmnMar" prefWidth="114.0" text="MAR" />
+                              <TableColumn fx:id="clmnApr" prefWidth="114.0" text="APR" />
+                              <TableColumn fx:id="clmnMay" prefWidth="114.0" text="MAY" />
+                              <TableColumn fx:id="clmnJun" prefWidth="114.0" text="JUN" />
+                              <TableColumn fx:id="clmnJul" prefWidth="114.0" text="JUL" />
+                              <TableColumn fx:id="clmnAug" prefWidth="114.0" text="AUG" />
+                              <TableColumn fx:id="clmnSep" prefWidth="114.0" text="SEP" />
+                              <TableColumn fx:id="clmnOct" prefWidth="114.0" text="OCT" />
+                              <TableColumn fx:id="clmnNov" prefWidth="114.0" text="NOV" />
+                              <TableColumn fx:id="clmnDec" prefWidth="114.0" text="DEC" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="UNITS">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tblViewStocksUnits" layoutX="20.0" layoutY="21.0" onSort="#stockChartDataBaseUnits" prefHeight="432.0" prefWidth="562.0">
+                          <columns>
+                            <TableColumn fx:id="clmnItem2" prefWidth="75.0" text="C1" />
+                            <TableColumn prefWidth="75.0" text="C2" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
